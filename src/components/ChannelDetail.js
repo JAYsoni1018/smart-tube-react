@@ -4,6 +4,9 @@ import { fetchData } from "../utils/fetchData";
 import { Box, CardContent, Typography } from "@mui/material";
 import ChannelCard from "./ChannelCard"
 import { CheckCircle } from "@mui/icons-material";
+import Videos from "./Videos";
+import ChannelVideos from "./ChannelVideos";
+import VideoCard from "./VideoCard";
 const ChannelDetail = () => {
   const { id } = useParams();
   const [channelInfo, setchannelData] = useState(null)
@@ -34,7 +37,13 @@ const ChannelDetail = () => {
             zIndex: 10,
             height: '300px'
           }} />
-        <ChannelCard channelInfo={channelInfo}/>
+        <ChannelCard channelInfo={channelInfo} marginTop='-100px' />
+
+        <Box display={"flex-start"} p='2'>
+          <Box sx={{ m: { md: '20px' } }} />
+          <ChannelVideos videos={video} channelInfo={channelInfo} />
+
+        </Box>
       </Box>
     </Box>
   )

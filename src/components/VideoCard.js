@@ -16,26 +16,36 @@ const VideoCard = ({ video }) => {
         return `${truncated.join(" ")}${tail}`;
     };
     return (
-        <Card sx={{ width: { md: "370px", xs: "100%", background: "#1e1e1e" } }}>
-            <Link to='\'>
+
+        video?.title ? <>
+            <Card sx={{ width: { md: "270px", xs: "100%", background: "#1e1e1e" } }}>
+                <Link to={video?.videoId ? `/video/${video?.videoId}` : ""}>
             {/* {video.videoId ? `/video/${video.videoId}` : demoVideoUrl}  */}
-                <img src={video.thumbnails[0].url} style={{ height: "209px", width: { md: "393px", xs: "100%" }, backgroundSize: "auto" }} alt={video.title} />
+                    <img src={video?.thumbnails[0].url} style={{ height: "209px", width: { md: "293px", xs: "100%" }, backgroundSize: "auto" }} alt={video?.title} />
             </Link>
-            <CardContent sx={{ height: "100px", width: { md: "361px", sm: "377px", xs: "375px" }, padding: "9px", backgroundColor: "#1e1e1e" }}>
-                <Link to='\'>
+                <CardContent sx={{ height: "80px", width: { md: "261px", sm: "377px", xs: "375px" }, padding: "9px", backgroundColor: "#1e1e1e" }}>
+
                     <Typography variant='subtitle1' fontWeight={"bold"} color={"white"}>
-                        {video.title ? truncateWords(video.title, 11, "...") : demoVideoTitle.slice(0, 60)}
+                        {truncateWords(video?.title, 10, "...")}
                     </Typography>
 
-                </Link>
-                <Link to={video.author.channelId ? `/channel/${video.author.channelId}` : demoChannelUrl}>
+                    {
+                        video?.author?.title ? <>
+
+                            <Link to={video?.author?.channelId ? `/channel/${video?.author?.channelId}` : demoChannelUrl}>
                     <Typography variant='subtitle2' fontWeight={"bold"} color={"grey"}>
-                        {video.author.title ? video.author.title.slice(0, 60) : demoChannelTitle.slice(0, 60)}
+                                    {video?.author?.title.slice(0, 60)}
                         <CheckCircle sx={{ fontSize: 12, color: "grey", ml: 1, lineHeight: "2px" }} />
                     </Typography>
                 </Link>
+                        </> : <></>
+                    }
+
             </CardContent>
         </Card>
+
+        </> : ""
+
 
     )
 }

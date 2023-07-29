@@ -7,7 +7,8 @@ const SildeBar = ({selectedCategory, setselectedCategory}) =>(
         overflowY: "auto",
         height: { sx: "auto", md: "95%" },
         flexDirection: { md: "column" },
-        marginTop: "12px"
+        marginTop: "12px",
+        marginRight: '60px'
       }
       }
     >
@@ -30,9 +31,7 @@ const SildeBar = ({selectedCategory, setselectedCategory}) =>(
           </button>
         ))
       }
-      <Typography className="copyright" variant="body2" sx={{ position: { sx: "none", md: "sticky", bottom: "0", background: "#000 ", paddingTop: "9px", color: "white", mt: "4px" } }}  >
-        Copy Right SmartTube
-      </Typography>
+
     </Stack >
   );
 

@@ -5,7 +5,7 @@ import { Stack } from "@mui/material";
 import SearchBar from "./SearchBar";
 const Navbar = () => (
 
-<Stack  direction={"row"} alignItems={"center"} sx={{position:"sticky",top:"0", justifyContent:"space-between",p:"3px"}}>
+   <Stack direction={"row"} alignItems={"center"} sx={{ position: "sticky", top: "0", background: "#0b0654", justifyContent: "space-between", p: "3px" }}>
 
    <Link to='/' style={{display:"flex",alignItems:"center"}}>  <img src={logo} alt=""  width={"45"} /></Link>
  <SearchBar/>

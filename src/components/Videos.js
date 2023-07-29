@@ -8,13 +8,15 @@ const Videos = ({ videos }) => {
       {
     
 
-        videos.map((item, idx) => (
-          <Box key={idx}>
-           {/* {item.video.videoId && <VideoCard video={item.video}/>} */}
-        <VideoCard video={item.video}/>
+        videos.map((item, index) => (
 
-           {/* {console.log(item)}  */}
+          <Box key={index + 1}>
+            {/* {item.video.videoId && <VideoCard video={item.video}/>} */}
+            <VideoCard video={item.video} />
+
+            {console.log(item)} 
           </Box>
+
         ))
        
       }

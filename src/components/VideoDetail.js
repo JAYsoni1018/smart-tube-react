@@ -1,7 +1,8 @@
+import { Box } from "@mui/material"
 
 const VideoDetail = () => {
   return (
-    <div>VideoDetail</div>
+    <Box>VideoDetail</Box>
   )
 }
 
