@@ -58,11 +58,15 @@ const VideoDetail = ({ route }) => {
             </Stack>
           </Box>
         </Box>
-      </Stack>
       {/* related videos section */}
       <Box px={2} py={{ md: 1 }} justifyContent={'center'} alignItems={'center'}>
+          <Stack sx={{ position: "fixed", top: "0" }}>
+
+            <Typography color={'#fff'} sx={{ fontWeight: 'bold', textAlign: 'center' }}> Suggestion</Typography>
+          </Stack>
         <Videos videos={RelatedVideos?.contents} direction='column' />
       </Box>
+      </Stack >
     </Box>
   )
 }
