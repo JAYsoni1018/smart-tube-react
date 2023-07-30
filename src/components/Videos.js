@@ -1,10 +1,10 @@
 import { Box, Stack } from "@mui/material";
 import VideoCard from "./VideoCard";
 
-const Videos = ({ videos }) => {
+const Videos = ({ videos, direction }) => {
   // console.log(videos);
   return (
-    <Stack mt={"12px"} direction="row" flexWrap="wrap" justifyContent="center" gap={2}>
+    <Stack mt={"12px"} direction={direction ? { direction } : 'row'} flexWrap="wrap" justifyContent="center" gap={2}>
       {
     
 
@@ -14,7 +14,7 @@ const Videos = ({ videos }) => {
             {/* {item.video.videoId && <VideoCard video={item.video}/>} */}
             <VideoCard video={item.video} />
 
-            {console.log(item)} 
+            {/* {console.log(item)}  */}
           </Box>
 
         ))
