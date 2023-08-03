@@ -17,11 +17,12 @@ const VideoDetail = ({ route }) => {
   }, [id]);
   // console.log(RelatedVideos)
 
-  if (!Data) {
-    return "Loading...";
-  }
+
 
   return (
+
+    Data ?
+      (
     <Box minHeight={"95vh"} width={'100%'} >
 
       <Stack direction={{ xs: 'column', md: 'row' }} padding={'23px'}>
@@ -66,6 +67,17 @@ const VideoDetail = ({ route }) => {
       </Box>
       </Stack >
     </Box>
+
+      ) : (
+
+        <Box minHeight={"95vh"} width={'100%'} display={'flex'} justifyContent={'center'} alignItems={'center'}>
+          <Typography color="#fff" variant={{ sm: 'subtitle1', md: 'h5' }} fontWeight={"bold"} sx={{ marginTop: '12px', paddingY: '8px' }}>
+            Loading.....
+          </Typography>
+        </Box>
+      )
+
+
   )
 }
 
