@@ -18,12 +18,12 @@ const VideoCard = ({ video }) => {
     return (
 
         video?.title ? <>
-            <Card sx={{ width: { md: "270px", xs: "100%", background: "#1e1e1e" } }}>
+            <Card sx={{ width: { md: "261px", sm: "377px", xs: "290px", background: "#1e1e1e" } }} >
                 <Link to={video?.videoId ? `/video/${video?.videoId}` : ""}>
             {/* {video.videoId ? `/video/${video.videoId}` : demoVideoUrl}  */}
-                    <img src={video?.thumbnails[0].url} style={{ height: "209px", width: { md: "293px", xs: "100%" }, backgroundSize: "auto" }} alt={video?.title} />
+                    <img src={video?.thumbnails[0].url} style={{ height: "209px", width: { md: "261px", sm: "100%", xs: "200px" }, backgroundSize: "auto" }} alt={video?.title} />
             </Link>
-                <CardContent sx={{ height: "80px", width: { md: "261px", sm: "377px", xs: "375px" }, padding: "9px", backgroundColor: "#1e1e1e" }}>
+                <CardContent sx={{ height: "80px", width: { md: "261px", sm: "377px", xs: "100%" }, padding: "9px", backgroundColor: "#1e1e1e" }}>
 
                     <Typography variant='subtitle1' fontWeight={"bold"} color={"white"}>
                         {truncateWords(video?.title, 10, "...")}
