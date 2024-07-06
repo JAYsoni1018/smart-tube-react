@@ -12,7 +12,7 @@ import TheaterComedyIcon from '@mui/icons-material/TheaterComedy';
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
 import DeveloperModeIcon from '@mui/icons-material/DeveloperMode';
 
-export const logo = 'https://i.ibb.co/PFcQQv6/smart-Tube.png';
+export const logo = 'https://firebasestorage.googleapis.com/v0/b/file-sharing-75989.appspot.com/o/file-Upload%2Fsmart-Tube.png?alt=media&token=036cfdd6-2ce8-4b87-8406-2ed820088970g';
 
 export const categories = [
   { name: 'New', icon: <HomeIcon />, },
